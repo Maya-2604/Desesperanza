@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; 
+    color: #333;
+}
+
+header {
+    background-color: #ff5c5c; /* Color del encabezado */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    margin: 20px 0;
+    color: white;
+}
+
+/* Estilos para Día de Muertos */
+#diaDeMuertos {
+    color: #ffffff; /* Color del texto */
+    background-color: #000000; /* Fondo de la sección en negro */
+}
+
+#diaDeMuertos .card {
+    border: 2px solid #444; /* Color del borde */
+    background-color: #3e3e3e; /* Fondo de la tarjeta */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+#diaDeMuertos .card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para Halloween */
+#halloween {
+    color: #ffffff; /* Color del texto */
+    background-color: #3e3e3e; /* Fondo de la sección */
+}
+
+#halloween .card {
+    border: 2px solid #444; /* Color del borde */
+    background-color: #3e3e3e; /* Fondo de la tarjeta */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+#halloween .card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff5c5c; /* Color del pie de página */
+    color: white;
+    position: relative;
+    bottom: 0;
+}
+
+button {
+    background-color: #ff8c00; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff5c5c; /* Color del botón al pasar el cursor */
+}
+
+div.form {
+    border-radius: 10px;
+    background-color: #222121;
+    color: #ffffff;
+}

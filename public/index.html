@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería La Desesperanza - Especiales de Temporada</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+
+ <!-- Menú de Navegación -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Panadería La Desesperanza</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="mostrarSeccion('Productos')">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="mostrarSeccion('agregar')">Agregar Productos</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Encabezado Principal -->
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Panadería La Desesperanza</h1>
+        <p>Especiales de Día de Muertos y Halloween</p>
+    </header>
+
+     <!-- Sección de Inicio -->
+     <section id="inicio" class="container my-5 text-center">
+        <h2>Bienvenido a La Desesperanza</h2>
+                <img src="img/Desesperanza.jpeg" id="imagenInicio" class="img-fluid rounded my-3" alt="Panadería La Desesperanza">
+                <p>
+                    En Panadería La Desesperanza, nos dedicamos a ofrecer productos de panadería frescos y deliciosos. 
+                    Nuestros sabores son el resultado de recetas tradicionales que han pasado de generación en generación. 
+                    Durante las festividades, traemos a nuestra comunidad productos especiales que celebran la cultura y la tradición, 
+                    como el Pan de Muerto y las galletas de Halloween. 
+                    ¡Ven y disfruta de la magia de nuestras creaciones!
+                </p>
+    </section>
+
+    <!-- Sección Productos -->
+    <section id="Productos" class="container my-5" style="display: none;">
+        <h2>Productos </h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/pan_muerto.jpg" class="card-img-top" alt="Pan de Muerto">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pan de Muerto</h5>
+                        <p class="card-text">$25 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Pan de Muerto', 'panMuerto')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/galletas_DM.jpg" class="card-img-top" alt="Galletas Día de Muertos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Galletas Día de Muertos</h5>
+                        <p class="card-text">$30 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Galletas Día de Muertos', 'galletasDM')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/calaveritaschocolate.jpg" class="card-img-top" alt="Calaveritas de Chocolate">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Calaveritas de Chocolate</h5>
+                        <p class="card-text">$10 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Calaveritas de Chocolate', 'calaveritaCh')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/macarrones_pandemuerto.jpg" class="card-img-top" alt="Macarrones de Pan de Muerto">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Macarrones de Pan de Muerto</h5>
+                        <p class="card-text">$25 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Macarrones de Pan de Muerto', 'macarrones_pandemuerto')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/cupcakes_calaveras.jpg" class="card-img-top" alt="Cupcakes de Calaveras">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Cupcakes de Calaveras</h5>
+                        <p class="card-text">$40 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Cupcakes de Calaveras', 'cupcakes_calaveras')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/chocolate_DM.jpg" class="card-img-top" alt="Chocolate Caliente de Calavera">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Chocolate Caliente de Calavera</h5>
+                        <p class="card-text">$45 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Chocolate Caliente de Calavera', 'chocolateCl')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/FK_galletas.jpg" class="card-img-top" alt="Galletas Frida Kahlo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Galletas Frida Kahlo</h5>
+                        <p class="card-text">$35 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Galletas Frida Kahlo', 'galletasFK')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/conchas_DM.jpg" class="card-img-top" alt="Conchas Día de Muertos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Conchas Día de Muertos</h5>
+                        <p class="card-text">$25 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Conchas Día de Muertos', 'conchasDM')">Eliminar Producto</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/calaverita_azucar.jpg" class="card-img-top" alt="Calaverita de Azúcar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Calaverita de Azúcar</h5>
+                        <p class="card-text">$20 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Calaverita de Azúcar', 'calaveritaAz')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/monster_pie.jpg" class="card-img-top" alt="Pie de Monstruo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pie de Monstruo</h5>
+                        <p class="card-text">$75 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Pie de Monstruo', 'pieMn')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/bloody_donuts.jpg" class="card-img-top" alt="Donas Sangrientas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Donas Sangrientas</h5>
+                        <p class="card-text">$50 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Donas Sangrientas', 'donasSn')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/monster_donuts.jpg" class="card-img-top" alt="Donas de Monstruos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Donas de Monstruos</h5>
+                        <p class="card-text">$110 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Donas de Monstruos', 'donasMn')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/pastelsencillo_halloween.jpg" class="card-img-top" alt="Pastel Halloween">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pastel Halloween</h5>
+                        <p class="card-text">$90 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Pastel Halloween', 'pastelHwn')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/merengue_fantasma.jpg" class="card-img-top" alt="Merengues Fantasmas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Merengues Fantasmas</h5>
+                        <p class="card-text">$50 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Merengues Fantasmas', 'merenguesFn')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/pastel_rollo.jpg" class="card-img-top" alt="Pastel en Rollo Monstruo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pastel en Rollo Monstruo</h5>
+                        <p class="card-text">$100 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Pastel en Rollo Monstruo', 'dpastelRM')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/pizza_calaveras.jpg" class="card-img-top" alt="Pizza de Calaveras">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pizza de Calaveras</h5>
+                        <p class="card-text">$99 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Pizza de Calaveras', 'pizzaCl')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/monster_cookies.jpg" class="card-img-top" alt="Galletas de Monstruos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Galletas de Monstruos</h5>
+                        <p class="card-text">$70 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Galletas de Monstruos', 'galletasMn')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/monster_pancakes.jpg" class="card-img-top" alt="Hotcakes de Monstruo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hotcakes de Monstruo</h5>
+                        <p class="card-text">$86 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Hotcakes de Monstruo', 'pancakesMn')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/spooky_icecream.jpg" class="card-img-top" alt="Helado tenebroso">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Helado tenebroso</h5>
+                        <p class="card-text">$45 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Helado tenebrosos', 'heladoTn')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/spooky_drink.jpg" class="card-img-top" alt="Bebida misteriosa">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bebida misteriosa</h5>
+                        <p class="card-text">$55 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Bebida misteriosa', 'bebidaMs')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark bg-secondary text-white">
+                    <img src="img/monster_cupcake.jpg" class="card-img-top" alt="Cupcake de Monstruo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Cupcake de Monstruo</h5>
+                        <p class="card-text">$30 MXN</p>
+                        <button class="btn btn-dark" onclick="eliminar('Cupcake de Monstruo', 'cupcakeMn')">Eliminar Producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </section>
+
+
+    <!-- Sección Agregar Productos -->
+    <section id="agregar" class="container my-5">
+       <br>
+       <br>
+        <h2>Agregar Producto</h2>
+        
+        <!-- Formulario para agregar productos -->
+        <div class="div.form">
+            <form id="formAgregarProducto" action="/agregar_producto" method="POST">
+              <div class="mb-3">
+                <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+                <input type="text" class="form-control" id="nombreProducto" name="nombreproducto" required>
+              </div>
+              <div class="mb-3">
+                <label for="precioProducto" class="form-label">Precio del Producto</label>
+                <input type="number" class="form-control" id="precioProducto" name="precioProducto" required min="0" step="0.01">
+              </div>
+              <div class="mb-3">
+                <label for="imagenProducto" class="form-label">URL de la Imagen</label>
+                <input type="url" class="form-control" id="imagenProducto" name="imagenProducto" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Agregar Producto</button>
+            </form>
+            <form action="/obtenerProductos" METHOD="GET">
+                <button type="submit">Ver Productos</button>
+            </form>
+          </div>
+          
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Panadería La Desesperanza. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Servidor.js"></script>
+    <script src="validaciones.js"></script>
+
+    <script>
+        function mostrarSeccion(seccion) {
+            document.getElementById('Productos').style.display = 'none';
+            document.getElementById('agregar').style.display = 'none';
+            document.getElementById(seccion).style.display = 'block';
+        }
+
+
+    </script>
+</body>
+</html>
+
